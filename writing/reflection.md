@@ -129,9 +129,11 @@ TODO: Use a fenced code block to provide the output for this command.
 
 ### Use an Itemized List to Provide the First Three Squared Integers in the Output Lists
 
-- 5184
-- 841
-- 3721
+</ul>
+    </li>5184</li>
+    </li>841</li>
+    </li>3721</li>
+</ul>
 
 ## Source Code and Configuration Files
 
@@ -151,13 +153,22 @@ def confirm_valid_file(file: Path) -> bool:
     return False
 ```
 
-TODO: Write at least one paragraph to explain the request source code
-Essentially what this is saying is that the function called "confirm_valid_file" is going to determine if the 
+Essentially what this is saying is that the function called "confirm_valid_file" is going to determine if the file has numbers in it. It is also going to confirm that the file exists. It will also say if the file is a valid path, meaning a valid directory. It will do this using an if statement. By saying if the file is not none it is saying that if the file has things in it it will return the word "True", but if the file either doesnt exist or has nothing in it it will return "False". 
 
 #### A function that squares an integer using a `for` loop
 
-TODO: Use a fenced code block to provide the requested source code
-TODO: Write at least one paragraph to explain the request source code
+```
+def compute_square_for(value: int) -> int:
+    """Compute the square of a number through iteration with a for loop."""
+    # initialize the answer to zero
+    answer = 0
+    # repeatedly add to the answer the absolute value of the variable called value
+    for _ in range(abs(value)):
+        answer = answer + abs(value)
+    # return the computed integer square
+    return answer
+```
+This is a function called compute_for_square that uses a for loop to iterate through the the list of integers within the numbers.txt file and square them by first taking the
 
 #### A function that uses a `while` loop to square an integer value
 
