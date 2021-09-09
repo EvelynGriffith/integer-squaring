@@ -187,17 +187,31 @@ def compute_square_while(value: int) -> int:
     return answer
 ```
 
-This is saying that first the string will be converted into integers so that each number becomes a singular integer. Then is will iterate through the file called numbers.txt. Notice though, that this has a new variable called num_iterations = 0 this is set there because the while loop functions on the condition that if there are still more numbers to go through then continue through the file. So every time it iterates through the loop it will at 1 to the num_iterations variable. That is done through this line of code "num_iterations = num_iterations + 1". Then there is also the answer variable which will in the beginning also be set to zero. This is similar to the for loop in a sense that when the loop collects the integer it will add the absolute value of the integer to answer which equals 0. Then it will return answer which is the squared value of the integer. 
+This is saying that first the string will be converted into integers so that each number becomes a singular integer. Then is will iterate through the file called numbers.txt. Notice though, that this has a new variable called num_iterations = 0 this is set there because the while loop functions on the condition that if there are still more numbers to go through then continue through the file. So every time it iterates through the loop it will at 1 to the num_iterations variable. That is done through this line of code "num_iterations = num_iterations + 1". Then there is also the answer variable which will in the beginning also be set to zero. This is similar to the for loop in a sense that when the loop collects the integer it will add the absolute value of the integer to answer which equals 0. Then it will return answer which is the squared value of the integer.
 
 #### An enumeration class that defines the options for squaring an integer
 
-TODO: Use a fenced code block to provide the requested source code
-TODO: Write at least one paragraph to explain the request source code
+```
+from enum import Enum
+```
+
+This is basically telling the computer to go into a class called enum and import Enum from that class.
 
 #### An example of a higher-order function that accepts a function as input
 
-TODO: Use a fenced code block to provide the requested source code
-TODO: Write at least one paragraph to explain the request source code
+```
+def compute_square_iterative(
+    contents: str, square_function: Callable[[int], int]
+) -> List[int]:
+    """Compute the square of all of the integer values inside of the contents."""
+    squared_values = []
+    for x in contents.split("\n"):
+        if x != '':
+            squared_values.append(square_function(int(x)))
+    return squared_values
+```
+
+This function is a bit more complicated. It is called compute_square_iterative and this function is going to call on antoher function in order to square the values and print them as a list. In the first line of code, it is defining the function and telling it to take the string of integers in the numbers.txt file and turn them into a list of integers. The list will then be called squared_values. From there the function will iterate into a for loop that says for the integer, in this case x, in contents we will split them and create a single integer. Then if x has a value (does not equal nothing) we will append (or bring back) the squared value from the square_function callable list and print that squared value.
 
 ### What is the purpose of the `pyproject.toml` file?
 
