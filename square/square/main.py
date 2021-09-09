@@ -53,22 +53,31 @@ def compute_square_while(value: int) -> int:
 
 def compute_square_for(value: int) -> int:
     """Compute the square of a number through iteration with a for loop."""
-    # TODO: initialize the answer to zero
-    # TODO: repeatedly add to the answer the absolute value of the variable called value
-    # TODO: return the computed integer square
+    # initialize the answer to zero
+    answer = 0
+    # repeatedly add to the answer the absolute value of the variable called value
+    for _ in range(abs(value)):
+        answer = answer +abs(value)
+    # return the computed integer square
+    return answer
+
 
 
 def compute_square_iterative(
     contents: str, square_function: Callable[[int], int]
 ) -> List[int]:
     """Compute the square of all of the integer values inside of the contents."""
-    # TODO: create an empty list for the squared values
-    # TODO: iterate through all of the items in the contents
-    # --> TODO: convert the line into a number
-    # --> TODO: perform the number squaring computation with square_function
-    # --> TODO: add the squared_number to the square_list
-    # TODO: return the list of the squared numbers
-
+    # create an empty list for the squared values
+    squared_values = []
+    # iterate through all of the items in the contents
+    for x in contents.split('\n'):
+    # --> convert the line into a number
+        if x.strip('-').isnumeric():
+            squared_values.append(square_function(int(x)))
+    # -->  perform the number squaring computation with square_function
+    # --> add the squared_number to the square_list
+    # return the list of the squared numbers
+    return squared_values
 
 @cli.command()
 def square(
