@@ -1,13 +1,17 @@
 """Perform integer squaring with different approaches."""
 
-# TODO: import the Callable class for type annotations from the typing module
-# TODO: import the List class for type annotations from the typing module
+# import the Callable class for type annotations from the typing module
+from typing import Callable
+# import the List class for type annotations from the typing module
+from typing import List
 
 from enum import Enum
 
-# TODO: import the Path class from the pathlib module
+#import the path class from the pathlib website 
+from pathlib import Path
 
-# TODO: import the typer module
+#import typer module
+import typer
 
 from rich.console import Console
 
@@ -24,15 +28,27 @@ class IntegerSquareApproach(str, Enum):
 
 def confirm_valid_file(file: Path) -> bool:
     """Confirm that the provided file is a valid path."""
-    # TODO: determine if the file is not None and if it is a file
+    # determine if the file is not None and if it is a file
+    if file is not None:
+        #the file is valid
+        if file.is_file():
+            return True
+    #the file was either none or not valid
     return False
 
 
 def compute_square_while(value: int) -> int:
     """Compute the square of a number through iteration with a while loop."""
-    # TODO: initialize the number of iterations and the answer
-    # TODO: repeatedly increase the answer until getting to the value
-    # TODO: return the computed integer square
+    # initialize the number of iterations and the answer
+    num_iterations = 0
+    answer = 0
+    # repeatedly increase the answer until getting to the value
+    while num_iterations < value:
+        answer = answer + value
+        num_iterations = num_iterations + 1
+    # return the computed integer square
+    return answer
+    
 
 
 def compute_square_for(value: int) -> int:
