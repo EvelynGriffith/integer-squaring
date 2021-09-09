@@ -129,11 +129,11 @@ TODO: Use a fenced code block to provide the output for this command.
 
 ### Use an Itemized List to Provide the First Three Squared Integers in the Output Lists
 
-</ul>
-    </li>5184</li>
-    </li>841</li>
-    </li>3721</li>
-</ul>
+<ul>
+    <li>5184<li>
+    <li>841<li>
+    <li>3721<li>
+<ul>
 
 ## Source Code and Configuration Files
 
