@@ -153,7 +153,7 @@ def confirm_valid_file(file: Path) -> bool:
     return False
 ```
 
-Essentially what this is saying is that the function called "confirm_valid_file" is going to determine if the file has numbers in it. It is also going to confirm that the file exists. It will also say if the file is a valid path, meaning a valid directory. It will do this using an if statement. By saying if the file is not none it is saying that if the file has things in it it will return the word "True", but if the file either doesnt exist or has nothing in it it will return "False". 
+Essentially what this is saying is that the function called "confirm_valid_file" is going to determine if the file has numbers in it, that the file exists, and it will also say if the file is a valid path, meaning a valid directory. It will do this using an if statement. By saying "if the file is not none" it is saying that if the file has things in it it will return the word "True", but if the file either doesnt exist or has nothing in it it will return "False".
 
 #### A function that squares an integer using a `for` loop
 
@@ -168,12 +168,26 @@ def compute_square_for(value: int) -> int:
     # return the computed integer square
     return answer
 ```
-This is a function called compute_for_square that uses a for loop to iterate through the the list of integers within the numbers.txt file and square them by first taking the
+
+This is a function called compute_for_square that uses a for loop to iterate through the list of integers within the numbers.txt file. First it will take the string of numbers and turn them into individual integers. Then it will square them by first taking the absolute value of that number, it does so by using the "for _ in range(abs(value))", and then using the answer variable in "answer = 0" it will add the absolute value of the integer to the answer variable giving the output of a squared integer.
 
 #### A function that uses a `while` loop to square an integer value
 
-TODO: Use a fenced code block to provide the requested source code
-TODO: Write at least one paragraph to explain the request source code
+```
+def compute_square_while(value: int) -> int:
+    """Compute the square of a number through iteration with a while loop."""
+    # initialize the number of iterations and the answer
+    num_iterations = 0
+    answer = 0
+    # repeatedly increase the answer until getting to the value
+    while num_iterations < abs(value):
+        answer = answer + abs(value)
+        num_iterations = num_iterations + 1
+    # return the computed integer square
+    return answer
+```
+
+This is saying that first the string will be converted into integers so that each number becomes a singular integer. Then is will iterate through the file called numbers.txt. Notice though, that this has a new variable called num_iterations = 0 this is set there because the while loop functions on the condition that if there are still more numbers to go through then continue through the file. So every time it iterates through the loop it will at 1 to the num_iterations variable. That is done through this line of code "num_iterations = num_iterations + 1". Then there is also the answer variable which will in the beginning also be set to zero. This is similar to the for loop in a sense that when the loop collects the integer it will add the absolute value of the integer to answer which equals 0. Then it will return answer which is the squared value of the integer. 
 
 #### An enumeration class that defines the options for squaring an integer
 
