@@ -2,15 +2,16 @@
 
 # import the Callable class for type annotations from the typing module
 from typing import Callable
+
 # import the List class for type annotations from the typing module
 from typing import List
 
 from enum import Enum
 
-#import the path class from the pathlib website 
+# import the path class from the pathlib website
 from pathlib import Path
 
-#import typer module
+# import typer module
 import typer
 
 from rich.console import Console
@@ -30,10 +31,10 @@ def confirm_valid_file(file: Path) -> bool:
     """Confirm that the provided file is a valid path."""
     # determine if the file is not None and if it is a file
     if file is not None:
-        #the file is valid
+        # the file is valid
         if file.is_file():
             return True
-    #the file was either none or not valid
+    # the file was either none or not valid
     return False
 
 
@@ -43,12 +44,11 @@ def compute_square_while(value: int) -> int:
     num_iterations = 0
     answer = 0
     # repeatedly increase the answer until getting to the value
-    while num_iterations < value:
-        answer = answer + value
+    while num_iterations < abs(value):
+        answer = answer + abs(value)
         num_iterations = num_iterations + 1
     # return the computed integer square
     return answer
-    
 
 
 def compute_square_for(value: int) -> int:
@@ -57,10 +57,9 @@ def compute_square_for(value: int) -> int:
     answer = 0
     # repeatedly add to the answer the absolute value of the variable called value
     for _ in range(abs(value)):
-        answer = answer +abs(value)
+        answer = answer + abs(value)
     # return the computed integer square
     return answer
-
 
 
 def compute_square_iterative(
@@ -70,14 +69,15 @@ def compute_square_iterative(
     # create an empty list for the squared values
     squared_values = []
     # iterate through all of the items in the contents
-    for x in contents.split('\n'):
-    # --> convert the line into a number
-        if x.strip('-').isnumeric():
+    for x in contents.split("\n"):
+        # --> convert the line into a number
+        if x.strip("-").isnumeric():
             squared_values.append(square_function(int(x)))
     # -->  perform the number squaring computation with square_function
     # --> add the squared_number to the square_list
     # return the list of the squared numbers
     return squared_values
+
 
 @cli.command()
 def square(
