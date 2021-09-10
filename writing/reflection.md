@@ -8,7 +8,7 @@
 
 TODO: Use a fenced code block to provide the output for this command.
 
-- `poetry run square --approach for --dir input --file numbers.txt`
+- `poetry run square --approach while --dir input --file numbers.txt`
 
 ```
 
@@ -215,26 +215,24 @@ This function is a bit more complicated. It is called compute_square_iterative a
 
 ### What is the purpose of the `pyproject.toml` file?
 
-TODO: Provide a one-paragraph response that answers this question in your own words.
-TODO: You may leverage your response to this question from S.O.S Week
+This file is going to set parameters for what the program needs in order to run correctly. It will also connect the user to the poetry package and give them information on what the package settings are. Not only that, but it also sets the package linting tools in order and allows the running of those files so that the program can be properly checked. It will also create a virtual environment for that code to live in and allow for the dependencies that it installs to set further parameters that can improve the virtual environment for the code and allow for further development of said code.
 
 ### What is the purpose of the `poetry.lock` file?
 
-TODO: Provide a one-paragraph response that answers this question in your own words.
-TODO: You may leverage your response to this question from S.O.S Week
+This is something like the .toml file but it categorizes dependencies and prevents you from automatically getting the latest versions of your dependencies. It also allows people to all have the same versions of things so that if there is collaboration on the project no one is going to have different versions. It will also prevent updates so that you cant have problems working on a specific project due to a unwanted update. It also creates co-dependencies and allows all of the different dependencies to work together.
 
 ### What are three different ways in which you can run the `square` program?
 
-TODO: Describe the first way for running the program, giving a command and a paragraph
+The first way is to cd into the square directory and run this code `poetry run square --approach for --dir input --file numbers.txt` which will iterate you through a for loop.
 
-TODO: Describe the first way for running the program, giving a command and a paragraph
+The second way is to cd into the rocket directory and run this code `poetry run square --approach while --dir input --file numbers.txt` which will iterate through a while loop but ultimately show the same answer.
 
-TODO: Describe the first way for running the program, giving a command and a paragraph
+The final way is to cd into the rocket directory and run this code `
 
 ### What was the greatest challenge that you faced when completing this assignment?
 
-TODO: Provide a one-paragraph response that answers this question in your own words.
+I think that the biggest challenge I faced when trying to work through this lab was working on the third function which calls on another function. When working on that I struggled to figure out how to split the string into singular integers and then call on them as well to square that integer. I also really struggled with how to make the function call the absolute value of the function because that was actually centered around the original function that it's calling on rather than the function itself.
 
 ### Based on your experiences with this project, what is one way in which you want to improve?
 
-TODO: Provide a one-paragraph response that answers this question in your own words.
+I really want to improve my knowledge of source code and the commands I can use to make things much more efficient. I also want to better understand the why behind things so that I can follow logical courses of action in order to solve problems. 
