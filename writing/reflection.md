@@ -190,10 +190,14 @@ This is saying that first the string will be converted into integers so that eac
 #### An enumeration class that defines the options for squaring an integer
 
 ```
-from enum import Enum
+class IntegerSquareApproach(str, Enum):
+    """Define the name for the approach to squaring a number."""
+
+    for_loop = "for"
+    while_loop = "while"
 ```
 
-This is basically telling the computer to go into a class called enum and import Enum from that class.
+This is basically telling the computer to go into a class called enum and import Enum from that class. then it is telling you that it will give two options for squaring an integer either a for loop or a while loop. This means that it defines the for loop as "for" and the while loop as "while" so that when you call upon it it will create those specific loops.
 
 #### An example of a higher-order function that accepts a function as input
 
