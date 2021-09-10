@@ -6,8 +6,6 @@
 
 ### What is the output from running the following commands?
 
-TODO: Use a fenced code block to provide the output for this command.
-
 - `poetry run square --approach while --dir input --file numbers.txt`
 
 ```
