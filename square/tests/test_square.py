@@ -49,8 +49,10 @@ def test_compute_square_iterative_for_loop():
     square_list = main.compute_square_iterative(number_list, square_function)
     assert square_list == [72 * 72, 29 * 29, 61 * 61, 42 * 42, 44 * 44]
 
+
 # Add a test case for confirming the correctness of the compute_square_iterative function
 # when it is using the square_function as main.compute_square_for
+
 
 def test_compute_square_iterative_while_loop():
     """Confirm that the for loop calculates squares correctly for negatives and positives in loop."""
@@ -62,5 +64,3 @@ def test_compute_square_iterative_while_loop():
     square_function = main.compute_square_for
     square_list = main.compute_square_iterative(number_list, square_function)
     assert square_list == [72 * 72, 29 * 29, 61 * 61, 42 * 42, 44 * 44]
-
-

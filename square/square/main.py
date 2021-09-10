@@ -71,7 +71,7 @@ def compute_square_iterative(
     # iterate through all of the items in the contents
     for x in contents.split("\n"):
         # --> convert the line into a number
-        if x != '':
+        if x != "":
             squared_values.append(square_function(int(x)))
     # -->  perform the number squaring computation with square_function
     # --> add the squared_number to the square_list
