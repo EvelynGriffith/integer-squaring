@@ -223,9 +223,12 @@ This is something like the .toml file but it categorizes dependencies and preven
 
 The first way is to cd into the square directory and run this code `poetry run square --approach for --dir input --file numbers.txt` which will iterate you through a for loop.
 
-The second way is to cd into the rocket directory and run this code `poetry run square --approach while --dir input --file numbers.txt` which will iterate through a while loop but ultimately show the same answer.
+The second way is to cd into the square directory and run this code `poetry run square --approach while --dir input --file numbers.txt` which will iterate through a while loop but ultimately show the same answer.
 
-The final way is to cd into the rocket directory and run this code `
+The final way is to cd into the square directory and run this code :
+`poetry install`
+`poetry shell`
+`square --approach while --dir input --file numbers.txt`
 
 ### What was the greatest challenge that you faced when completing this assignment?
 
